@@ -1,0 +1,90 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[paper=a4paper,margin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    columns=fullflexible,
+    keepspaces=true,
+    frame=single
+}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\usepackage[
+    backend=bibtex,
+    style=ieee,
+    citestyle=ieee
+]{biblatex}
+\addbibresource{references.bib}
+\defbibheading{bibliography}[\refname]{}
+
+\setlength{\parindent}{0pt}
+
+% No extra spacing between lines
+\linespread{1.15}
+
+% Simple cover page
+\newcommand{\coverpage}{
+    \begin{titlepage}
+    \centering
+    {\Huge \bfseries HPC Project\par}
+    \vspace{0.7cm}
+    {\large Machine Learning Project\par}
+    \vfill
+    {\large\textbf{Authors:}}\par
+    {\large MONTARON Léa\par
+    JODET Marie-Lou\par
+    GUERIN Léo\par
+
+    }
+    \vspace{2cm}
+    {\large\textbf{Date:}}\par
+    {\large\today}
+    \end{titlepage}
+}
+
+\begin{document}
+
+    \coverpage
+
+%    \begin{abstract}
+%        Your abstract.
+%    \end{abstract}
+
+
+    \newpage
+
+    \section{Introduction et Présentation des Données}
+
+    Dans le cadre de ce projet, nous exploitons le jeu de données \textit{Sleep Health and Lifestyle}, qui recense des informations multidimensionnelles sur la santé et les habitudes de vie d'un échantillon d'individus. Les variables de ce dataset, peuvent être classées en trois catégories distinctes :
+
+    \begin{enumerate}
+        \item Données Démographiques et Professionnelles : Identifiant unique, Âge, Genre, et Occupation (Métier).
+        \item Indicateurs de Mode de Vie : Niveau d'activité physique, Nombre de pas quotidiens (Daily Steps), Durée du sommeil et Qualité du sommeil (échelle subjective).
+        \item Biomarqueurs Physiologiques : Indice de Masse Corporelle (BMI), Fréquence cardiaque (Heart Rate), Pression artérielle (Blood Pressure au format systolique/diastolique) et Niveau de stress.
+    \end{enumerate}
+
+    Le dataset contient également une variable cible catégorielle, Sleep Disorder (indiquant la présence d'insomnie, d'apnée du sommeil ou l'absence de trouble), qui servira ici de variable de contrôle pour la validation \textit{a posteriori}, et non de cible d'apprentissage primaire.
+
+    
+    
+    \section{Problématique et Objectifs}
+
+    L'analyse traditionnelle des données de santé se concentre souvent sur une approche supervisée binaire (ex: prédire la présence ou l'absence d'une maladie). Cependant, les troubles du sommeil et la détérioration de la santé cardiovasculaire résultent rarement d'un facteur unique, mais plutôt d'une combinaison complexe d'habitudes de vie et de parametres physiologiques. \newline
+
+    Nous cherchons à répondre à la question suivante :  \newline
+    Est-il possible d'identifier, sans a priori médical, des profils types de dormeurs homogènes en se basant uniquement sur la corrélation entre leurs données biométriques et leur mode de vie ?
+
+
+    \section{Approche Méthodologique}
+    Pour répondre à cette problématique d'exploration, nous avons opté pour une approche de clustering non-supervisé. Ce choix est justifié par la volonté de découvrir la structure intrinsèque des données sans être biaisé par les étiquettes de diagnostic préexistantes (sleep disorder).
+
+
+
+\end{document}
