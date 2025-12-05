@@ -1,4 +1,4 @@
-# Sleep & Health (Machine Learning) project's information
+# Sleep & Health project's information
 
 ## Team
 
@@ -30,3 +30,4 @@ The best performance is achieved with an optimized XGBoost model, reaching:
 - *hyperparameter_tuning.py* : Optimizes the hyperparameters of the selected XGBoost model using Grid Search.
 - *final_validation.py* : Trains the final optimized model and evaluates performance on the separate validation dataset.
 - *ensemble_methods.py* : Implements ensemble methods (Voting, Weighted Voting) to combine model predictions.
+
