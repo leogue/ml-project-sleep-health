@@ -62,4 +62,3 @@ train_df.to_csv("../data/processed_dataset.csv", index=False)
 val_df.to_csv("../data/validation_dataset.csv", index=False)
 
 print(df.head())
-
