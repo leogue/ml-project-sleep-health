@@ -64,7 +64,7 @@
 
     \section{Introduction and Data Presentation}
 
-    In this project, we utilize the \textit{Sleep Health and Lifestyle} dataset, which records health and lifestyle information for a sample of individuals. The variables in this dataset can be classified into three distinct categories:
+    In this project, we used the \textit{Sleep Health and Lifestyle} dataset, which records health and lifestyle information for a sample of individuals. The variables in this dataset can be classified into three distinct categories:
 
     \begin{enumerate}
         \item Demographic and Professional Data: Unique Identifier, Age, Gender, and Occupation.
@@ -80,12 +80,12 @@
 
     In the medical field, early detection of sleep disorders is crucial for preventing serious cardiovascular complications. The challenge is not only to predict correctly but, more importantly, not to miss pathological cases. \newline
 
-    Our problem statement is as follows: \newline
+    Our problem statement is the following:\newline
     \textbf{How can we maximize the detection of sleep disorders (Insomnia and Apnea) using lifestyle data and simple biomarkers, while minimizing the risk of false negatives?} \newline
 
     Our objectives are:
     \begin{itemize}
-        \item Identify the most influential factors on sleep health.
+        \item Identify factors that have the most influence on sleep health.
         \item Compare different supervised learning models (Logistic Regression, SVM, Random Forest, XGBoost).
         \item Optimize the selected model to maximize Recall, a critical metric in medical diagnosis.
         \item Evaluate the possibility of reducing the number of necessary variables without performance loss.
@@ -98,7 +98,7 @@
     \begin{itemize}
         \item \textbf{Categorical Variable Encoding}:
         \begin{itemize}
-            \item \textit{Occupation}: This variable is nominal (no logical order between "Engineer" and "Lawyer"). We used One-Hot Encoding to prevent the model from incorrectly interpreting a numerical hierarchy.
+            \item \textit{Occupation}: This variable is nominal (no logical order between "Engineer" and "Lawyer"). We used \textbf{One-Hot Encoding} to prevent the model from incorrectly interpreting a numerical hierarchy.
             \item \textit{BMI Category} and \textit{Sleep Disorder}: These variables present an intrinsic progression of severity (e.g., Normal < Overweight < Obese). We opted for \textbf{Ordinal Encoding} to preserve this valuable ordinal information for prediction.
         \end{itemize}
 
@@ -289,6 +289,8 @@
         \item \textbf{Precision (Macro)} : 0.9333
         \item \textbf{F1 Score (Macro)} : 0.9471
     \end{itemize}
+
+    We are satisfied with these results; however, a more critical perspective is necessary, as we validated the model using only a small subset of the dataset (around twenty values).
 
     The confusion matrix below details the predictions:
 
