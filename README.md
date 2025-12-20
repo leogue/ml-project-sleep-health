@@ -4,7 +4,7 @@
 
 - Léo Guérin - CCC2 - leo.guerin@edu.devinci.fr
 - Léa Montaron - CCC2 - lea.montaron@edu.devinci.fr
-- MArie-Lou Jodet - CCC2 - marie-lou.jodet@edu.devinci.fr
+- Marie-Lou Jodet - CCC2 - marie-lou.jodet@edu.devinci.fr
 
 ## Project Overview 
 
@@ -30,4 +30,5 @@ The best performance is achieved with an optimized XGBoost model, reaching:
 - *hyperparameter_tuning.py* : Optimizes the hyperparameters of the selected XGBoost model using Grid Search.
 - *final_validation.py* : Trains the final optimized model and evaluates performance on the separate validation dataset.
 - *ensemble_methods.py* : Implements ensemble methods (Voting, Weighted Voting) to combine model predictions.
+
 
